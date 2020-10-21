@@ -403,7 +403,7 @@ Prepare current end date
         ...         set suite variable      \${${name}}     ${value}
         ...     ELSE        set test variable      \${${name}}     ${value}
 
-[Common] - Search permisison by name
+[Common] - Search permission by name
       [Arguments]  &{arg_dic}
       ${dic}   [200] API get all permissions    access_token=${arg_dic.access_token}
       ${response}       get from dictionary  ${dic}     response
@@ -442,31 +442,6 @@ Prepare current end date
     [Arguments]     &{arg_dic}
     ${result}    Fetch From Left    ${arg_dic.test_name}     ${SPACE}
     [Common] - Set variable     ${arg_dic.output}       ${result}
-
-[Common] - Verify balance change
-    [Arguments]     ${balance_before}   ${balance_after}    ${balance_amount}     ${operator}
-    ${balance_before}       convert to number   ${balance_before}
-    ${balance_after}       convert to number   ${balance_after}
-    ${balance_amount}       convert to number   ${balance_amount}
-    run keyword if     '${operator}'=='+'    run keywords
-    ...     [Common] - Verify balance change after add      ${balance_before}   ${balance_after}    ${balance_amount}   AND
-    ...     log     ${none}
-    run keyword if     '${operator}'=='-'    run keywords
-    ...     [Common] - Verify balance change after subtract      ${balance_before}   ${balance_after}    ${balance_amount}      AND
-    ...     log     ${none}
-    run keyword if     '${operator}'=='equal'    run keywords
-    ...     should be equal as numbers     ${balance_before}    ${balance_after}    AND
-    ...     log     ${none}
-
-[Common] - Verify balance change after subtract
-    [Arguments]     ${balance_before}   ${balance_after}    ${balance_amount}
-    ${result}   evaluate   ${balance_before}-${balance_amount}
-    should be equal as numbers     ${balance_after}    ${result}
-
-[Common] - Verify balance change after add
-    [Arguments]     ${balance_before}   ${balance_after}    ${balance_amount}
-     ${result}   evaluate   ${balance_before}+${balance_amount}
-    should be equal as numbers     ${balance_after}    ${result}
 
 [Common] - Verify datetime is changed
     [Arguments]       ${datetime_before}   ${datetime_after}
