@@ -42,7 +42,7 @@ Resource          ./1_common/web_common_keywords.robot
 Resource          ./1_common/api_common/api_common_keywords.robot
 Resource          ./1_common/api_common/1_pre_request/common.robot
 Resource          ./1_common/api_common/2_request/common.robot
-Resource          ./1_common/api_common/3_post_request/common.robot
+Resource          ./1_common/api_common/3_post_process/common.robot
 
 
 #### ROBOT ELEMENT ####

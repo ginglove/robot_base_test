@@ -1,6 +1,4 @@
 *** Settings ***
-Resource        ../0_resources/imports.robot
-
 
 *** Variables ***
 ${UPPER_CASES}       ABCDEFGHIJKLMNOPQRSTUVWXYZ

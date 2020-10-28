@@ -1,5 +1,4 @@
 *** Settings ***
-Resource          ../../1_common/imports.robot
 
 *** Variables ***
 ${CONTENT_TYPE_JSON}    application/json

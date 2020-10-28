@@ -1,5 +1,4 @@
 *** Settings ***
-Resource        ../../1_common/imports.robot
 
 *** Keywords ***
 [common][keycloak][200] - get list users

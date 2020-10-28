@@ -1,5 +1,4 @@
 *** Settings ***
-Resource          ../../1_common/imports.robot
 
 *** Keywords ***
 [common][verify] - string field or null
