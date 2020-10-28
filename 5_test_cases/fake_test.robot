@@ -1,6 +1,8 @@
 *** Settings ***
 Documentation    Suite description
 Resource      ../imports.robot
+Suite Setup       [Kw] - Open browser
+Test Teardown     [Common] - Close Browser
 
 *** Variables ***
 ${browser}    chrome
@@ -9,7 +11,5 @@ ${DownloadDir}      ../0_resources/chromedriver
 
 
 *** Test Cases ***
-Test title
-     [Kw] - Open browser
+Test title    
      [Kw] - Click login button and wait for Login txtbox display 
-     [Common] - Close Browser

@@ -32,8 +32,8 @@ echo "=== Check current libs ==="
 ############ RUNNING TEST ##################
 echo "=== Run robot test==="
 parentpath="$(dirname "$(dirname "$(dirname $PWD)")")"
-TESTCASE_FOLDER="$parentpath/robot_webui_test_core/robot_webui_test_core/5_test_cases"
-RESULT_FOLDER=$path/robot_webui_test_core/results
+TESTCASE_FOLDER="$path/robot_base_test/5_test_cases"
+RESULT_FOLDER=$path/results
 robot -L TRACE -v ENV:$ENV -v browser:headlesschrome -e ignore -e not-ready -d $RESULT_FOLDER $TESTCASE_FOLDER
 ########################### ENABLE BELOW SECTION TO DISABLE TEST ##########################
 echo "=== Run Robot !!! Done !!! ==="

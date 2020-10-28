@@ -32,11 +32,18 @@ Library           ./0_resources/pythonlibs/urlparse_compat.py
 Library           ./0_resources/pythonlibs/RabbitMq.py
 
 #### ROBOT WEB COMMON KEYWORDS ####
-Resource          ./1_common/api_common_keywords.robot
+
 Resource          ./1_common/bdd_web_common_keywords.robot
 Resource          ./1_common/rabbitmq_common_keywords.robot
 Resource          ./1_common/sql_common_keywords.robot
 Resource          ./1_common/web_common_keywords.robot
+
+#### ROBOT WEB COMMON KEYWORDS ####
+Resource          ./1_common/api_common/api_common_keywords.robot
+Resource          ./1_common/api_common/1_pre_request/common.robot
+Resource          ./1_common/api_common/2_request/common.robot
+Resource          ./1_common/api_common/3_post_request/common.robot
+
 
 #### ROBOT ELEMENT ####
 Resource     ./2_elements/homepage.robot
